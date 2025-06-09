@@ -7,3 +7,5 @@ export const tasksTable = sqliteTable("tasks_table", {
   createdAt: text("created_at").notNull(),
   updatedAt: text("updated_at").notNull(),
 });
+
+export type Task = typeof tasksTable.$inferSelect;
